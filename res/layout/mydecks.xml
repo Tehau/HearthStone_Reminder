@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/title_myDecks"
+                android:id="@+id/title_myDecks"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/button_add_new_deck"
+                android:id="@+id/button_add_new_deck"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="10dp"/>
+        <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_myDecks"
+                android:layout_below="@+id/button_add_new_deck"
+                android:layout_centerHorizontal="true"/>
+</RelativeLayout>

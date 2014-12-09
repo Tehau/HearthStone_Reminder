@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HearthStone_Reminder</string>
+    <!-- Title Name -->
+    <string name="app_name">HearthStone Reminder</string>
+    <string name="title_app">HearthStone Reminder</string>
+    <string name="title_myDecks">My Decks</string>
+    <!-- Button Name -->
+    <string name="button_myDecks">My Decks</string>
+    <string name="button_start_match">Start Match</string>
+    <string name="button_add_new_deck">+Add</string>
 </resources>
