@@ -5,6 +5,7 @@ package me.core.hearthstonereminder.pojos;
  */
 public class Deck {
 
+    private long _id;
     private String _name;
     private String _className;
 
@@ -23,19 +24,27 @@ public class Deck {
     /*
     Getter and Setter
      */
-    public String get_className() {
+    public long getId() {
+        return _id;
+    }
+
+    public void setId(long _id) {
+        this._id = _id;
+    }
+
+    public String getClassName() {
         return _className;
     }
 
-    public void set_className(String _className) {
+    public void setClassName(String _className) {
         this._className = _className;
     }
 
-    public String get_name() {
+    public String getName() {
         return _name;
     }
 
-    public void set_name(String _name) {
+    public void setName(String _name) {
         this._name = _name;
     }
 

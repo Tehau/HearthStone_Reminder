@@ -44,7 +44,7 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
         //variable assignment
         // TODO : faire une switch pour chaque nom de class
         imageView.setImageResource(R.drawable.ic_launcher);
-        className.setText(deck.get_name());
+        className.setText(deck.getName());
 
         return convertView;
     }
