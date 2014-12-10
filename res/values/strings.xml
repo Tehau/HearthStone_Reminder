@@ -4,6 +4,7 @@
     <string name="app_name">HearthStone Reminder</string>
     <string name="title_app">HearthStone Reminder</string>
     <string name="title_myDecks">My Decks</string>
+    <string name="title_deckbuilder">Deck Builder</string>
     <!-- Button Name -->
     <string name="button_myDecks">My Decks</string>
     <string name="button_start_match">Start Match</string>
