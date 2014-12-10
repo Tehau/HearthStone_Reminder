@@ -17,24 +17,24 @@ import java.util.ArrayList;
  */
 public class DeckAdapter extends ArrayAdapter<Deck> {
 
-    private ArrayList<Deck> listDeck;
-    private LayoutInflater layoutInflater;
-    private Context context;
+    private ArrayList<Deck> _listDeck;
+    private LayoutInflater _layoutInflater;
+    private Context _context;
 
     public DeckAdapter(Context context, int resource, ArrayList<Deck> listDeck) {
         super(context, resource, listDeck);
-        this.listDeck = listDeck;
-        this.context = context;
+        this._listDeck = listDeck;
+        this._context = context;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         //return super.getView(position, convertView, parent);
-        Deck deck = listDeck.get(position);
+        Deck deck = _listDeck.get(position);
 
         if (convertView == null){
-            layoutInflater = LayoutInflater.from(context);
-            convertView = layoutInflater.inflate(R.layout.deck_adapter, null);
+            _layoutInflater = LayoutInflater.from(_context);
+            convertView = _layoutInflater.inflate(R.layout.deck_adapter, null);
         }
 
         //initialization all objects of the adapter

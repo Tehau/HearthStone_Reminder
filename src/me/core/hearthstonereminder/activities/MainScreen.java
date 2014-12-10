@@ -11,11 +11,13 @@ import me.core.hearthstonereminder.events.GoToMyDecks;
  */
 public class MainScreen extends Activity {
 
+    // objects
     private Button _button_MyDecks;
     // TODO : after the builder do the reminder
     private Button _button_Start;
 
-    private GoToMyDecks goToMyDecks;
+    // events
+    private GoToMyDecks _goToMyDecks;
 
     /**
      * Called when the activity is first created.
@@ -28,7 +30,13 @@ public class MainScreen extends Activity {
         _button_MyDecks = (Button) findViewById(R.id.button_myDecks);
         _button_Start = (Button) findViewById(R.id.button_start);
 
-        goToMyDecks = new GoToMyDecks(this);
-        _button_MyDecks.setOnClickListener(goToMyDecks);
+        _goToMyDecks = new GoToMyDecks(this);
+        _button_MyDecks.setOnClickListener(_goToMyDecks);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 }

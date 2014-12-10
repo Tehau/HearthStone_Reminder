@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 /**
@@ -49,8 +48,9 @@ public class DeckDataSource {
         database.delete(DBHelper.TABLE_DECK, DBHelper.DECK_C_ID + "=" + id, null);
     }
 
-    public List<Deck> getAllDecks(){
-        List<Deck> decks = new ArrayList<Deck>();
+    public ArrayList<Deck> getAllDecks(){
+        ArrayList<Deck> decks = new ArrayList<Deck>();
+
         Cursor cursor = database.query(DBHelper.TABLE_DECK,
                 allColumns, null, null, null, null, null);
 
