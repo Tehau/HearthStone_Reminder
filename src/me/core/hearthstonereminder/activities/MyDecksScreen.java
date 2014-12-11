@@ -40,7 +40,7 @@ public class MyDecksScreen extends Activity {
         // get all decks and link to the adapter
         //TODO :
         //decks = deckDataSource.getAllDecks();
-        _deckAdapter = new DeckAdapter(this,R.layout.deck_adapter,_decks);
+        _deckAdapter = new DeckAdapter(this,R.layout.deckadapter,_decks);
 
         //events
         _goToDeckBuilder = new GoToDeckBuilder(this);

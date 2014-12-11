@@ -34,7 +34,7 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
 
         if (convertView == null){
             _layoutInflater = LayoutInflater.from(_context);
-            convertView = _layoutInflater.inflate(R.layout.deck_adapter, null);
+            convertView = _layoutInflater.inflate(R.layout.deckadapter, null);
         }
 
         //initialization all objects of the adapter

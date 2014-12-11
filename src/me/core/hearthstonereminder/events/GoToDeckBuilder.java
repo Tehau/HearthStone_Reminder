@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
 import me.core.hearthstonereminder.activities.DeckBuilderScreen;
-import me.core.hearthstonereminder.activities.MyDecksScreen;
 
 /**
  * Created by wandy-linux on 12/10/14.
