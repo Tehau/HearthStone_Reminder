@@ -15,15 +15,14 @@ public class DBHelper extends SQLiteOpenHelper {
 
     //Table Deck
     public static final String TABLE_DECK ="decks";
-    public static final String DECK_C_ID = "id";
+    public static final String DECK_C_ID = "_id";
     public static final String DECK_C_CLASS = "class";
-
     public static final String DECK_C_NAME = "name";
 
-    public static final String TABLE_DECK_CREATE = "create table" +
+    public static final String TABLE_DECK_CREATE = "create table if not exists s" +
             TABLE_DECK + "(" +
             DECK_C_ID + " integer primary key autoincrement, " +
-            DECK_C_NAME + " text"+
+            DECK_C_NAME + " text not null, "+
             DECK_C_CLASS + " text not null);";
 
     public DBHelper(Context context)

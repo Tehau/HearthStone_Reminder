@@ -19,5 +19,6 @@
         <activity android:name="me.core.hearthstonereminder.activities.DeckBuilderScreen"
                   android:label="@string/title_deckbuilder">
         </activity>
+        <service android:name="me.core.hearthstonereminder.activities.A"/>
     </application>
 </manifest>

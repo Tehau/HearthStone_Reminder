@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
+
 /**
  * Created by wandy-linux on 12/9/14.
  */
@@ -74,4 +75,17 @@ public class DeckDataSource {
 
         return deck;
     }
+
+    /*
+    Getters and Setters
+     */
+    public SQLiteDatabase getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(SQLiteDatabase database) {
+        this.database = database;
+    }
+
+
 }
