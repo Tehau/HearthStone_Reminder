@@ -28,6 +28,7 @@ public class DeckBuilderScreen extends Activity {
     //events
     private DeckAdded _deckAdded;
 
+    //Data base
     private DBHelper _dbHelper;
     private SQLiteDatabase _dataBase;
     private DeckDataSource _deckDataSource;
@@ -44,7 +45,6 @@ public class DeckBuilderScreen extends Activity {
         //Data base
         _dbHelper = new DBHelper(this);
         _dataBase = _dbHelper.getReadableDatabase();
-
         _deckDataSource = new DeckDataSource(_dataBase);
 
         //events

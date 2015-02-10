@@ -1,12 +1,9 @@
 package me.core.hearthstonereminder.events;
 
-import android.app.Activity;
 import android.view.View;
 import android.widget.EditText;
 import me.core.hearthstonereminder.activities.DeckBuilderScreen;
-import me.core.hearthstonereminder.activities.MainScreen;
 import me.core.hearthstonereminder.pojos.Deck;
-import me.core.hearthstonereminder.pojos.DeckDataSource;
 
 /**
  * Created by wandy-linux on 12/12/14.
@@ -30,16 +27,8 @@ public class DeckAdded implements View.OnClickListener {
         this._activity = activity;
     }
 
-    /*
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-
-    }
-    */
-
     @Override
     public void onClick(View v) {
-        //TODO : faire la persistence
         if(v.equals(this._activity.getSaveButton())){
 
             //Get Deck Name
@@ -51,7 +40,7 @@ public class DeckAdded implements View.OnClickListener {
             //Get Selected Class
             String className = (String) this._activity.getSpinnerClassName().getSelectedItem();
 
-            Deck deck = new Deck(deckName,className);
+            Deck deck = new Deck(className,deckName);
             _activity.getDeckDataSource().store(deck);
 
             this._activity.toastify(DECK_SAVE);

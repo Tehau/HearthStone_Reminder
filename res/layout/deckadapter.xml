@@ -19,5 +19,12 @@
             android:text="Deck Name"
             android:layout_toRightOf="@+id/imageClass"
             android:id="@+id/deckName"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_delete_deck"
+            android:id="@+id/button_delete_deck"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
 
 </RelativeLayout>

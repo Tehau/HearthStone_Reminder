@@ -9,6 +9,7 @@
     <string name="button_myDecks">My Decks</string>
     <string name="button_start_match">Start Match</string>
     <string name="button_add_new_deck">+Add</string>
+    <string name="button_delete_deck">X</string>
     <!-- Spinner choice -->
     <string-array name="classname_array">
         <item>Druid</item>
