@@ -9,7 +9,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 import com.example.HearthStone_Reminder.R;
 import me.core.hearthstonereminder.adapter.DeckAdapter;
-import me.core.hearthstonereminder.events.DeckDeleted;
 import me.core.hearthstonereminder.events.GoToDeckBuilder;
 import me.core.hearthstonereminder.pojos.DBHelper;
 import me.core.hearthstonereminder.pojos.Deck;
@@ -57,6 +56,7 @@ public class MyDecksScreen extends Activity {
 
         // Set the adapter to display the decks
         _listView.setAdapter(_deckAdapter);
+        
         //events
         _goToDeckBuilder = new GoToDeckBuilder(this);
         _addButton.setOnClickListener(_goToDeckBuilder);
@@ -80,16 +80,20 @@ public class MyDecksScreen extends Activity {
 
     }
 
+    public void toastify(String text) {
+        _toaster = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        _toaster.show();
+    }
+
+    /*
+    Getters and Setters
+     */
+
     public DeckAdapter getDeckAdapter(){
         return _deckAdapter;
     }
 
     public DeckDataSource getDeckDataSource(){
         return _deckDataSource;
-    }
-
-    public void toastify(String text) {
-        _toaster = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-        _toaster.show();
     }
 }

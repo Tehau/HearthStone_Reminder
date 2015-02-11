@@ -40,7 +40,6 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        //return super.getView(position, convertView, parent);
         deck = _listDeck.get(position);
 
         if (convertView == null){

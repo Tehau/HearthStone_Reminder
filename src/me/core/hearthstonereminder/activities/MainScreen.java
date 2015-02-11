@@ -22,7 +22,6 @@ public class MainScreen extends Activity {
     // events
     private GoToMyDecks _goToMyDecks;
 
-
     /**
      * Called when the activity is first created.
      */

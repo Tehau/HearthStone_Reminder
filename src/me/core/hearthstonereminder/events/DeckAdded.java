@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 import me.core.hearthstonereminder.activities.DeckBuilderScreen;
-import me.core.hearthstonereminder.adapter.DeckAdapter;
 import me.core.hearthstonereminder.pojos.Deck;
 
 /**
@@ -22,7 +21,6 @@ public class DeckAdded implements View.OnClickListener {
     private DeckBuilderScreen _activity;
 
     public DeckAdded(){
-
     }
 
     public DeckAdded(DeckBuilderScreen activity){
@@ -48,7 +46,6 @@ public class DeckAdded implements View.OnClickListener {
 
             // return result for previous activity (MyDecksScreen)
             Intent result = new Intent();
-            result.putExtra("button", "1");
             _activity.setResult(_activity.RESULT_OK,result);
             _activity.finish();
 

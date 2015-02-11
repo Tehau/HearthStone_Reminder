@@ -25,6 +25,5 @@ public class GoToDeckBuilder implements View.OnClickListener  {
     public void onClick(View v) {
         Intent intent = new Intent(_activity, DeckBuilderScreen.class);
         _activity.startActivityForResult(intent, 0);
-        //_activity.startActivity(intent);
     }
 }
