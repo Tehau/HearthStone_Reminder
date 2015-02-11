@@ -25,7 +25,7 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
     private Context _context;
 
     private ImageView imageView;
-    private TextView className;
+    private TextView deckName;
     private Button buttonDelete;
 
     private Deck deck;
@@ -49,13 +49,32 @@ public class DeckAdapter extends ArrayAdapter<Deck> {
 
         //initialization all objects of the adapter
         imageView = (ImageView) convertView.findViewById(R.id.imageClass);
-        className = (TextView) convertView.findViewById(R.id.deckName);
+        deckName = (TextView) convertView.findViewById(R.id.deckName);
         buttonDelete = (Button) convertView.findViewById(R.id.button_delete_deck);
 
         //variable assignment
-        // TODO : faire une switch pour chaque nom de class
-        imageView.setImageResource(R.drawable.ic_launcher);
-        className.setText(deck.getName());
+        switch (deck.getClassName()){
+            case "Druid": imageView.setImageResource(R.drawable.icon_druid_64);
+                break;
+            case "Hunter": imageView.setImageResource(R.drawable.icon_hunter_64);
+                break;
+            case "Mage": imageView.setImageResource(R.drawable.icon_mage_64);
+                break;
+            case "Paladin": imageView.setImageResource(R.drawable.icon_paladin_64);
+                break;
+            case "Priest": imageView.setImageResource(R.drawable.icon_priest_64);
+                break;
+            case "Rogue": imageView.setImageResource(R.drawable.icon_rogue_64);
+                break;
+            case "Shaman": imageView.setImageResource(R.drawable.icon_shaman_64);
+                break;
+            case "Warlock": imageView.setImageResource(R.drawable.icon_warlock_64);
+                break;
+            case "Warrior": imageView.setImageResource(R.drawable.icon_warrior_64);
+                break;
+        }
+
+        deckName.setText(deck.getName());
 
         //events
         buttonDelete.setOnClickListener(new DeckDeleted(deckDataSource,this));
