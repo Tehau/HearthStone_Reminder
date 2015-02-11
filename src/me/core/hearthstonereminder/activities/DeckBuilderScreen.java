@@ -20,9 +20,7 @@ public class DeckBuilderScreen extends Activity {
     //screen objects
     private Spinner _spinnerClassName;
     private EditText _textDeckName;
-
     private Button _saveButton;
-
     private Toast _toaster;
 
     //events
@@ -50,7 +48,11 @@ public class DeckBuilderScreen extends Activity {
         //events
         _deckAdded = new DeckAdded(this);
         _saveButton.setOnClickListener(_deckAdded);
+    }
 
+    public void toastify(String text) {
+        _toaster = Toast.makeText(this, text, Toast.LENGTH_SHORT);
+        _toaster.show();
     }
 
     /*
@@ -79,11 +81,6 @@ public class DeckBuilderScreen extends Activity {
 
     public void setSaveButton(Button saveButton) {
         this._saveButton = saveButton;
-    }
-
-    public void toastify(String text) {
-        _toaster = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-        _toaster.show();
     }
 
     public DeckDataSource getDeckDataSource(){

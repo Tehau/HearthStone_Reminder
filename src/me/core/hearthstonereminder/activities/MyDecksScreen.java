@@ -1,6 +1,7 @@
 package me.core.hearthstonereminder.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
@@ -59,6 +60,13 @@ public class MyDecksScreen extends Activity {
         //events
         _goToDeckBuilder = new GoToDeckBuilder(this);
         _addButton.setOnClickListener(_goToDeckBuilder);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 0 && resultCode == RESULT_OK){
+            _deckAdapter.refreshAdapter();
+        }
     }
 
     @Override
