@@ -14,16 +14,28 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     //Table Deck
-    public static final String TABLE_DECK ="decks";
+    public static final String TABLE_DECKS ="decks";
     public static final String DECK_C_ID = "_id";
     public static final String DECK_C_CLASS = "class";
     public static final String DECK_C_NAME = "name";
 
-    public static final String TABLE_DECK_CREATE = "create table if not exists s" +
-            TABLE_DECK + "(" +
+    public static final String TABLE_DECK_CREATE = "create table if not exists " +
+            TABLE_DECKS + "(" +
             DECK_C_ID + " integer primary key autoincrement, " +
             DECK_C_NAME + " text not null, "+
             DECK_C_CLASS + " text not null);";
+
+    //Table Cards
+    public static final String TABLE_CARDS = "cards";
+    public static final String CARD_C_ID = "_id";
+    public static final String CARD_C_NAME = "name";
+    public static final String CARD_C_COST = "cost";
+
+    public static final String TABLE_CARD_CREATE = "create table if not exists " +
+            TABLE_CARDS + "(" +
+            CARD_C_ID + " integer primary key, " +
+            CARD_C_NAME + " text not null, " +
+            CARD_C_COST + " text not null);";
 
     public DBHelper(Context context)
     {
@@ -33,6 +45,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLE_DECK_CREATE);
+        db.execSQL(TABLE_CARD_CREATE);
     }
 
     @Override
@@ -40,7 +53,8 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.w(DBHelper.class.getName(),
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_DECK);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_DECKS);
+        db.execSQL("DROP TABLE IF ExISTS " + TABLE_CARDS);
         onCreate(db);
     }
 }

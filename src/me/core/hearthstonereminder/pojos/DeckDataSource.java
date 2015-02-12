@@ -41,18 +41,18 @@ public class DeckDataSource {
         values.put(DBHelper.DECK_C_NAME,deck.getName());
 
         // insert and generate ID
-        database.insert(DBHelper.TABLE_DECK,null,values);
+        database.insert(DBHelper.TABLE_DECKS,null,values);
     }
 
     public void delete(Deck deck){
         long id = deck.getId();
-        database.delete(DBHelper.TABLE_DECK, DBHelper.DECK_C_ID + "=" + id, null);
+        database.delete(DBHelper.TABLE_DECKS, DBHelper.DECK_C_ID + "=" + id, null);
     }
 
     public ArrayList<Deck> getAllDecks(){
         ArrayList<Deck> decks = new ArrayList<Deck>();
 
-        Cursor cursor = database.query(DBHelper.TABLE_DECK,
+        Cursor cursor = database.query(DBHelper.TABLE_DECKS,
                 allColumns, null, null, null, null, null);
 
         cursor.moveToFirst();
