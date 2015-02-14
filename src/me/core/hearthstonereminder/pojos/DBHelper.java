@@ -4,6 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import me.core.hearthstonereminder.parser.ParserJSON;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
 
 /**
  * Created by wandy-linux on 12/9/14.
@@ -37,8 +42,7 @@ public class DBHelper extends SQLiteOpenHelper {
             CARD_C_NAME + " text not null, " +
             CARD_C_COST + " text not null);";
 
-    public DBHelper(Context context)
-    {
+    public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
